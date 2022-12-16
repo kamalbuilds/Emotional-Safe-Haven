@@ -1,6 +1,8 @@
 # Emotional-Safe-Haven
 A platform where users can share their mental dilemmas with other people and can get assistance.
 
+create .env with our mongodb atals connection string
+
 npm install
 
 npm run dev
