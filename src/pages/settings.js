@@ -8,7 +8,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Settings | Material Kit
+        Settings | Emotional Safe Haven
       </title>
     </Head>
     <Box

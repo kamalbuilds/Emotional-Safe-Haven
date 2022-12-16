@@ -9,7 +9,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Customers | Material Kit
+        Counsellor | Emotional Safe Haven
       </title>
     </Head>
     <Box

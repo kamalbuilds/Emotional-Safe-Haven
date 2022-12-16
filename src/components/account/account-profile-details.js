@@ -27,12 +27,12 @@ const states = [
 
 export const AccountProfileDetails = (props) => {
   const [values, setValues] = useState({
-    firstName: 'Katarina',
-    lastName: 'Smith',
-    email: 'demo@devias.io',
+    firstName: 'Kamal',
+    lastName: 'Singh',
+    email: 'kamalthedev7@gmail.com',
     phone: '',
-    state: 'Alabama',
-    country: 'USA'
+    state: 'Delhi',
+    country: 'India'
   });
 
   const handleChange = (event) => {

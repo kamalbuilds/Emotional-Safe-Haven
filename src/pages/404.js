@@ -7,7 +7,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        404 | Material Kit
+        404 | Emotional Safe Haven
       </title>
     </Head>
     <Box

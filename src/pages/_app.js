@@ -23,7 +23,7 @@ const App = (props) => {
     <CacheProvider value={emotionCache}>
       <Head>
         <title>
-          Material Kit Pro
+         Emotional Safe Haven
         </title>
         <meta
           name="viewport"
