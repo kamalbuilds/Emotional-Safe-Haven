@@ -119,15 +119,15 @@ export const DashboardSidebar = (props) => {
                   color="inherit"
                   variant="subtitle1"
                 >
-                  Acme Inc
+                  How's your mood today ?
                 </Typography>
                 <Typography
                   color="neutral.400"
                   variant="body2"
                 >
-                  Your tier
+                  Your mood
                   {' '}
-                  : Premium
+                  : Happy
                 </Typography>
               </div>
               <SelectorIcon
