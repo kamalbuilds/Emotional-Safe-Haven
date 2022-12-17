@@ -28,9 +28,9 @@ const items = [
     title: 'Therapists'
   },
   {
-    href: '/products',
-    icon: (<ShoppingBagIcon fontSize="small" />),
-    title: 'Products'
+    href: '/counsellors',
+    icon: (<UsersIcon fontSize="small" />),
+    title: 'Counsellors'
   },
   {
     href: '/account',
