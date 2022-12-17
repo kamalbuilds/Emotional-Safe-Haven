@@ -187,7 +187,7 @@ export const DashboardSidebar = (props) => {
             />
           </Box>
           <NextLink
-            href="https://material-kit-pro-react.devias.io/"
+            href="/sessions"
             passHref
           >
             <Button
