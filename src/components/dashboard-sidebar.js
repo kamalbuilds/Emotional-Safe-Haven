@@ -23,9 +23,9 @@ const items = [
     title: 'Dashboard'
   },
   {
-    href: '/counsellors',
+    href: '/therapists',
     icon: (<UsersIcon fontSize="small" />),
-    title: 'Counsellors'
+    title: 'Therapists'
   },
   {
     href: '/products',

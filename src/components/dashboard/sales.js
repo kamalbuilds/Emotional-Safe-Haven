@@ -89,23 +89,25 @@ export const Sales = (props) => {
             endIcon={<ArrowDropDownIcon fontSize="small" />}
             size="small"
           >
-            Last 7 days
+            Jump to latest
           </Button>
         )}
-        title="Latest Messages"
+        title="Latest Activity Feed"
       />
       <Divider />
+      {/* cardcontent stores the info of the card */}
       <CardContent>
         <Box
           sx={{
+            width: 700,
             height: 400,
             position: 'relative'
           }}
         >
-          <Bar
+          {/* <Bar
             data={data}
             options={options}
-          />
+          /> */}
         </Box>
       </CardContent>
       <Divider />
@@ -121,7 +123,7 @@ export const Sales = (props) => {
           endIcon={<ArrowRightIcon fontSize="small" />}
           size="small"
         >
-          Overview
+          Activity Feed
         </Button>
       </Box>
     </Card>
