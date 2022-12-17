@@ -5,8 +5,13 @@ import { LatestOrders } from '../components/dashboard/latest-orders';
 import { LatestProducts } from '../components/dashboard/latest-products';
 import { Sales } from '../components/dashboard/sales';
 import { TotalCustomers } from '../components/dashboard/total-customers';
+import { TasksProgress } from '../components/dashboard/tasks-progress';
 import { TrafficByDevice } from '../components/dashboard/traffic-by-device';
 import { DashboardLayout } from '../components/dashboard-layout';
+
+import TextField from "@mui/material/TextField";
+import NextLink from "next/link";
+import { Button } from "@mui/material";
 
 const Page = () => (
   <>
@@ -19,34 +24,54 @@ const Page = () => (
       component="main"
       sx={{
         flexGrow: 1,
-        py: 8
+        py: 4
       }}
     >
       <Container maxWidth={false}>
         <Grid
           container
-          spacing={3}
+          spacing={1}
         >
           <Grid
             item
-            lg={4}
-            sm={8}
-            xl={5}
-            xs={18}
+            lg={8}
+            md={12}
+            xl={9}
+            xs={12}
           >
-            <Budget />
+            <TextField 
+              id="outlined-multiline-static"
+              label="What's Your Dilemma?"
+              multiline
+              rows={7}
+              maxRows={7}
+              variant="filled"
+              style = {{width: 730}}
+            />
+            <NextLink href="/">
+              <Box sx={{m:1, display: "flex", justifyContent: "flex-end"}} fullWidth>
+            <Button
+              color="primary"
+              //fullWidth
+              sx={{ mt: 0,}}
+              variant="contained"
+            >
+              Publish
+            </Button>
+            </Box>
+          </NextLink>
           </Grid>
+          
           <Grid
             item
             xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
+            lg={4}
+            sm={9}
+            xs={18}
           >
-            <TotalCustomers />
+            <TasksProgress />
           </Grid>
-          
-          
+          {/* Activity feed */}
           <Grid
             item
             lg={8}
@@ -67,16 +92,7 @@ const Page = () => (
           </Grid>
           <Grid
             item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
-            <LatestProducts sx={{ height: '100%' }} />
-          </Grid>
-          <Grid
-            item
-            lg={8}
+            lg={12}
             md={12}
             xl={9}
             xs={12}
