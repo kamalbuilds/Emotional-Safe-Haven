@@ -61,7 +61,6 @@ const Page = () => (
             </Box>
           </NextLink>
           </Grid>
-          
           <Grid
             item
             xl={3}

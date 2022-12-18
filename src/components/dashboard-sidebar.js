@@ -11,27 +11,27 @@ const items = [
   
   {
     href: "/404",
-    imageUrl: "/static/images/products/product_3.png",
-    title: "Dash Board",
+    imageUrl: "/static/images/products/happy3.jpg",
+    title: "Rahul Gupta",
   },
   {
     href: "/404",
-    imageUrl: "/static/images/products/product_3.png",
+    imageUrl: "/static/images/products/happy3.jpg",
     title: "Aman Singh",
   },
   {
     href: "/404",
-    imageUrl: "/static/images/products/product_3.png",
+    imageUrl: "/static/images/products/happy3.jpg",
     title: "Monalisa Tiwari",
   },
   {
     href: "/404",
-    imageUrl: "/static/images/products/product_3.png",
+    imageUrl: "/static/images/products/happy3.jpg",
     title: "Monalisa Tiwari Pandey",
   },
   {
     href: "/404",
-    imageUrl: "/static/images/products/product_3.png",
+    imageUrl: "/static/images/products/happy3.jpg",
     title: "Ninja Hatori",
   },
 ];

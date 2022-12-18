@@ -1,17 +1,13 @@
-
-import { Box, Card, CardContent, CardHeader, Divider, Typography, useTheme } from '@mui/material';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import PhoneIcon from '@mui/icons-material/Phone';
-import TabletIcon from '@mui/icons-material/Tablet';
-
+import { Card, CardHeader, Divider, Typography, useTheme } from "@mui/material";
+import NextLink from "next/link";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
-import { AccountCircle, Help, Settings } from "@mui/icons-material";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import { AccountCircle } from "@mui/icons-material";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
-
+import Avatar from "@mui/material/Avatar";
+import AvatarGroup from "@mui/material/AvatarGroup";
 
 export const TrafficByDevice = (props) => {
   const theme = useTheme();
@@ -33,26 +29,35 @@ export const TrafficByDevice = (props) => {
           <Grid margin={1.5}>
             <Item sx={{ height: 130 }}>
               <Grid item xs={10} sx={{ textAlign: "left" }} paddingTop={1} paddingBottom={1}>
-                <div> TALK ABOUT GEOPOLITICS</div>
+                <Typography variant="h6" color={"primary"}>
+                  TALK ABOUT GEOPOLITICS
+                </Typography>
               </Grid>
               <Grid container spacing={2}>
                 <Grid item xs={8} sx={{ textAlign: "left" }}>
-                  <Grid sx={{ fontSize: 12 }} >
-                    Zombie created the voice channel
+                  <Grid>
+                    <Typography variant="subtitle2" fontSize={12} fontWeight="bold">
+                      Zombie created the voice channel
+                    </Typography>
                   </Grid>
                   <Grid sx={{ fontSize: 15 }}>
-                    <Button
-                      color="primary"
-                      sx={{ mt: 2.5 }}
-                      size="small"
-                      variant="contained"
-                    >
-                      JOIN
-                    </Button>
+                    <NextLink href="/404" passHref>
+                      <Button
+                        color="primary"
+                        sx={{ mt: 2.5, p: 0.5 }}
+                        size="small"
+                        variant="contained"
+                      >
+                        Join
+                      </Button>
+                    </NextLink>
                   </Grid>
                 </Grid>
                 <Grid item xs={4}>
-                  <GroupAddIcon sx={{ fontSize: 50 }} />
+                  <AvatarGroup total={24} size="small">
+                    <Avatar alt="Agnes Walker" src="/static/images/products/happy3.jpg" />
+                    <Avatar alt="Trevor Henderson" src="/static/images/products/happy3.jpg" />
+                  </AvatarGroup>
                 </Grid>
               </Grid>
             </Item>
@@ -61,26 +66,35 @@ export const TrafficByDevice = (props) => {
           <Grid margin={1.5}>
             <Item sx={{ height: 130 }}>
               <Grid item xs={10} sx={{ textAlign: "left" }} paddingTop={1} paddingBottom={1}>
-                <div> TALK ABOUT GEOPOLITICS</div>
+                <Typography variant="h6" color={"primary"}>
+                  TALK ABOUT GEOPOLITICS
+                </Typography>
               </Grid>
               <Grid container spacing={2}>
                 <Grid item xs={8} sx={{ textAlign: "left" }}>
-                  <Grid sx={{ fontSize: 12 }} >
-                    Zombie created the voice channel
+                  <Grid>
+                    <Typography variant="subtitle2" fontSize={12} fontWeight="bold">
+                      Zombie created the voice channel
+                    </Typography>
                   </Grid>
                   <Grid sx={{ fontSize: 15 }}>
-                    <Button
-                      color="primary"
-                      sx={{ mt: 2.5 }}
-                      size="small"
-                      variant="contained"
-                    >
-                      JOIN
-                    </Button>
+                    <NextLink href="/404" passHref>
+                      <Button
+                        color="primary"
+                        sx={{ mt: 2.5, p: 0.5 }}
+                        size="small"
+                        variant="contained"
+                      >
+                        Join
+                      </Button>
+                    </NextLink>
                   </Grid>
                 </Grid>
                 <Grid item xs={4}>
-                  <GroupAddIcon sx={{ fontSize: 50 }} />
+                  <AvatarGroup total={24} size="small">
+                    <Avatar alt="Agnes Walker" src="/static/images/products/happy3.jpg" />
+                    <Avatar alt="Trevor Henderson" src="/static/images/products/happy3.jpg" />
+                  </AvatarGroup>
                 </Grid>
               </Grid>
             </Item>
@@ -89,26 +103,35 @@ export const TrafficByDevice = (props) => {
           <Grid margin={1.5}>
             <Item sx={{ height: 130 }}>
               <Grid item xs={10} sx={{ textAlign: "left" }} paddingTop={1} paddingBottom={1}>
-                <div> TALK ABOUT GEOPOLITICS</div>
+                <Typography variant="h6" color={"primary"}>
+                  TALK ABOUT GEOPOLITICS
+                </Typography>
               </Grid>
               <Grid container spacing={2}>
                 <Grid item xs={8} sx={{ textAlign: "left" }}>
-                  <Grid sx={{ fontSize: 12 }} >
-                    Zombie created the voice channel
+                  <Grid>
+                    <Typography variant="subtitle2" fontSize={12} fontWeight="bold">
+                      Zombie created the voice channel
+                    </Typography>
                   </Grid>
                   <Grid sx={{ fontSize: 15 }}>
-                    <Button
-                      color="primary"
-                      sx={{ mt: 2.5 }}
-                      size="small"
-                      variant="contained"
-                    >
-                      JOIN
-                    </Button>
+                    <NextLink href="/404" passHref>
+                      <Button
+                        color="primary"
+                        sx={{ mt: 2.5, p: 0.5 }}
+                        size="small"
+                        variant="contained"
+                      >
+                        Join
+                      </Button>
+                    </NextLink>
                   </Grid>
                 </Grid>
                 <Grid item xs={4}>
-                  <GroupAddIcon sx={{ fontSize: 50 }} />
+                  <AvatarGroup total={24} size="small">
+                    <Avatar alt="Agnes Walker" src="/static/images/products/happy3.jpg" />
+                    <Avatar alt="Trevor Henderson" src="/static/images/products/happy3.jpg" />
+                  </AvatarGroup>
                 </Grid>
               </Grid>
             </Item>
@@ -127,15 +150,26 @@ export const TrafficByDevice = (props) => {
                   <Grid>
                     <AccountCircle sx={{ fontSize: 50 }} />
                   </Grid>
-                  <Grid>Dr. Kamal Singh</Grid>
+                  <Grid>
+                    <Typography variant="subtitle1" sx={{ fontWeight: "bold" }} color={"primary"}>
+                      {" "}
+                      Dr. Kamal Singh
+                    </Typography>
+                  </Grid>
                 </Grid>
                 <Grid item xs={7} sx={{ textAlign: "left" }}>
-                  <Grid>The Day Routine</Grid>
-                  <Grid>DD/MM/YYYY, time</Grid>
+                  <Grid>
+                    <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                      The Day Routine
+                    </Typography>
+                  </Grid>
+                  <Grid>
+                    <Typography variant="subtitle2">25/06/2023, 7 PM (IST)</Typography>
+                  </Grid>
                   <Grid container>
                     <Grid item xs={6}>
                       <Button
-                        color="primary"
+                        color="secondary"
                         sx={{ mt: 2 }}
                         size="small"
                         variant="contained"
@@ -163,15 +197,26 @@ export const TrafficByDevice = (props) => {
                   <Grid>
                     <AccountCircle sx={{ fontSize: 50 }} />
                   </Grid>
-                  <Grid>Dr. Amisha</Grid>
+                  <Grid>
+                    <Typography variant="subtitle1" sx={{ fontWeight: "bold" }} color={"primary"}>
+                      {" "}
+                      Dr. Amisha Pandey
+                    </Typography>
+                  </Grid>
                 </Grid>
                 <Grid item xs={7} sx={{ textAlign: "left" }}>
-                  <Grid>The Day Routine</Grid>
-                  <Grid>DD/MM/YYYY, time</Grid>
+                  <Grid>
+                    <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                      The Day Routine
+                    </Typography>
+                  </Grid>
+                  <Grid>
+                    <Typography variant="subtitle2">25/06/2023, 7 PM (IST)</Typography>
+                  </Grid>
                   <Grid container>
                     <Grid item xs={6}>
                       <Button
-                        color="primary"
+                        color="secondary"
                         sx={{ mt: 2 }}
                         size="small"
                         variant="contained"
@@ -194,6 +239,5 @@ export const TrafficByDevice = (props) => {
         </Grid>
       </Card>
     </>
-
   );
 };
