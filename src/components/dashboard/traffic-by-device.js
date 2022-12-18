@@ -1,122 +1,199 @@
-import { Doughnut } from 'react-chartjs-2';
+
 import { Box, Card, CardContent, CardHeader, Divider, Typography, useTheme } from '@mui/material';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import PhoneIcon from '@mui/icons-material/Phone';
 import TabletIcon from '@mui/icons-material/Tablet';
 
+import GroupAddIcon from "@mui/icons-material/GroupAdd";
+import { AccountCircle, Help, Settings } from "@mui/icons-material";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import Grid from "@mui/material/Grid";
+import { styled } from "@mui/material/styles";
+import Paper from "@mui/material/Paper";
+import { Button } from "@mui/material";
+
+
 export const TrafficByDevice = (props) => {
   const theme = useTheme();
 
-  const data = {
-    datasets: [
-      {
-        data: [63, 15, 22],
-        backgroundColor: ['#3F51B5', '#e53935', '#FB8C00'],
-        borderWidth: 8,
-        borderColor: '#FFFFFF',
-        hoverBorderColor: '#FFFFFF'
-      }
-    ],
-    labels: ['Desktop', 'Tablet', 'Mobile']
-  };
-
-  const options = {
-    animation: false,
-    cutoutPercentage: 80,
-    layout: { padding: 0 },
-    legend: {
-      display: false
-    },
-    maintainAspectRatio: false,
-    responsive: true,
-    tooltips: {
-      backgroundColor: theme.palette.background.paper,
-      bodyFontColor: theme.palette.text.secondary,
-      borderColor: theme.palette.divider,
-      borderWidth: 1,
-      enabled: true,
-      footerFontColor: theme.palette.text.secondary,
-      intersect: false,
-      mode: 'index',
-      titleFontColor: theme.palette.text.primary
-    }
-  };
-
-  const devices = [
-    {
-      title: 'Desktop',
-      value: 63,
-      icon: LaptopMacIcon,
-      color: '#3F51B5'
-    },
-    {
-      title: 'Tablet',
-      value: 15,
-      icon: TabletIcon,
-      color: '#E53935'
-    },
-    {
-      title: 'Mobile',
-      value: 23,
-      icon: PhoneIcon,
-      color: '#FB8C00'
-    }
-  ];
+  const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  }));
 
   return (
-    <Card {...props}>
-      <CardHeader title="Latest Events" />
-      <Divider />
-      <CardContent>
-        <Box
-          sx={{
-            height: 300,
-            position: 'relative'
-          }}
-        >
-          <Doughnut
-            data={data}
-            options={options}
-          />
-        </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            pt: 2
-          }}
-        >
-          {devices.map(({
-            color,
-            icon: Icon,
-            title,
-            value
-          }) => (
-            <Box
-              key={title}
-              sx={{
-                p: 1,
-                textAlign: 'center'
-              }}
-            >
-              <Icon color="action" />
-              <Typography
-                color="textPrimary"
-                variant="body1"
-              >
-                {title}
-              </Typography>
-              <Typography
-                style={{ color }}
-                variant="h4"
-              >
-                {value}
-                %
-              </Typography>
-            </Box>
-          ))}
-        </Box>
-      </CardContent>
-    </Card>
+    <>
+      <Card>
+        <CardHeader title="Break Out Rooms" />
+        <Divider />
+        <Grid item xs={18} spacing={7}>
+          <Grid margin={1.5}>
+            <Item sx={{ height: 130 }}>
+              <Grid item xs={10} sx={{ textAlign: "left" }} paddingTop={1} paddingBottom={1}>
+                <div> TALK ABOUT GEOPOLITICS</div>
+              </Grid>
+              <Grid container spacing={2}>
+                <Grid item xs={8} sx={{ textAlign: "left" }}>
+                  <Grid sx={{ fontSize: 12 }} >
+                    Zombie created the voice channel
+                  </Grid>
+                  <Grid sx={{ fontSize: 15 }}>
+                    <Button
+                      color="primary"
+                      sx={{ mt: 2.5 }}
+                      size="small"
+                      variant="contained"
+                    >
+                      JOIN
+                    </Button>
+                  </Grid>
+                </Grid>
+                <Grid item xs={4}>
+                  <GroupAddIcon sx={{ fontSize: 50 }} />
+                </Grid>
+              </Grid>
+            </Item>
+          </Grid>
+
+          <Grid margin={1.5}>
+            <Item sx={{ height: 130 }}>
+              <Grid item xs={10} sx={{ textAlign: "left" }} paddingTop={1} paddingBottom={1}>
+                <div> TALK ABOUT GEOPOLITICS</div>
+              </Grid>
+              <Grid container spacing={2}>
+                <Grid item xs={8} sx={{ textAlign: "left" }}>
+                  <Grid sx={{ fontSize: 12 }} >
+                    Zombie created the voice channel
+                  </Grid>
+                  <Grid sx={{ fontSize: 15 }}>
+                    <Button
+                      color="primary"
+                      sx={{ mt: 2.5 }}
+                      size="small"
+                      variant="contained"
+                    >
+                      JOIN
+                    </Button>
+                  </Grid>
+                </Grid>
+                <Grid item xs={4}>
+                  <GroupAddIcon sx={{ fontSize: 50 }} />
+                </Grid>
+              </Grid>
+            </Item>
+          </Grid>
+
+          <Grid margin={1.5}>
+            <Item sx={{ height: 130 }}>
+              <Grid item xs={10} sx={{ textAlign: "left" }} paddingTop={1} paddingBottom={1}>
+                <div> TALK ABOUT GEOPOLITICS</div>
+              </Grid>
+              <Grid container spacing={2}>
+                <Grid item xs={8} sx={{ textAlign: "left" }}>
+                  <Grid sx={{ fontSize: 12 }} >
+                    Zombie created the voice channel
+                  </Grid>
+                  <Grid sx={{ fontSize: 15 }}>
+                    <Button
+                      color="primary"
+                      sx={{ mt: 2.5 }}
+                      size="small"
+                      variant="contained"
+                    >
+                      JOIN
+                    </Button>
+                  </Grid>
+                </Grid>
+                <Grid item xs={4}>
+                  <GroupAddIcon sx={{ fontSize: 50 }} />
+                </Grid>
+              </Grid>
+            </Item>
+          </Grid>
+        </Grid>
+      </Card>
+
+      <Card>
+        <CardHeader title="Schedule" />
+        <Divider />
+        <Grid item xs={18} spacing={7}>
+          <Grid margin={1.5}>
+            <Item sx={{ height: 120 }}>
+              <Grid container spacing={2}>
+                <Grid item xs={5}>
+                  <Grid>
+                    <AccountCircle sx={{ fontSize: 50 }} />
+                  </Grid>
+                  <Grid>wffeuf</Grid>
+                </Grid>
+                <Grid item xs={7} sx={{ textAlign: "left" }}>
+                  <Grid>The Day Routine</Grid>
+                  <Grid>DD/MM/YYYY, time</Grid>
+                  <Grid container>
+                    <Grid item xs={6}>
+                      <Button
+                        color="primary"
+                        sx={{ mt: 2 }}
+                        size="small"
+                        variant="contained"
+                        padding={0}
+                      >
+                        Connect
+                      </Button>
+                    </Grid>
+                    <Grid item xs={6}>
+                      {" "}
+                      <Button color="primary" sx={{ mt: 2 }} size="small" variant="contained">
+                        Reshedule
+                      </Button>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Item>
+          </Grid>
+
+          <Grid margin={1.5}>
+            <Item sx={{ height: 120 }}>
+              <Grid container spacing={2}>
+                <Grid item xs={5}>
+                  <Grid>
+                    <AccountCircle sx={{ fontSize: 50 }} />
+                  </Grid>
+                  <Grid>wffeuf</Grid>
+                </Grid>
+                <Grid item xs={7} sx={{ textAlign: "left" }}>
+                  <Grid>The Day Routine</Grid>
+                  <Grid>DD/MM/YYYY, time</Grid>
+                  <Grid container>
+                    <Grid item xs={6}>
+                      <Button
+                        color="primary"
+                        sx={{ mt: 2 }}
+                        size="small"
+                        variant="contained"
+                        padding={0}
+                      >
+                        Connect
+                      </Button>
+                    </Grid>
+                    <Grid item xs={6}>
+                      {" "}
+                      <Button color="primary" sx={{ mt: 2 }} size="small" variant="contained">
+                        Reshedule
+                      </Button>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Item>
+          </Grid>
+        </Grid>
+      </Card>
+    </>
+
   );
 };

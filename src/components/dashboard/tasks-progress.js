@@ -1,50 +1,55 @@
 import { Avatar, Box, Card, CardContent, Grid, LinearProgress, Typography } from '@mui/material';
 import InsertChartIcon from '@mui/icons-material/InsertChartOutlined';
+/// Event tab on top
+import NextLink from "next/link";
+import { Button } from "@mui/material";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 export const TasksProgress = (props) => (
   <Card
     sx={{ height: '100%' }}
-    {...props}
   >
     <CardContent>
-      <Grid
-        container
-        spacing={3}
-        sx={{ justifyContent: 'space-between' }}
-      >
-        <Grid item>
+      <Box>
           <Typography
-            color="textSecondary"
-            gutterBottom
-            variant="overline"
+            color="inherit"
+            variant="subtitle2"
           >
-            TASKS PROGRESS
+            Want to talk to an expert?
           </Typography>
-          <Typography
-            color="textPrimary"
-            variant="h4"
-          >
-            75.5%
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Avatar
+          
+          <Box
             sx={{
-              backgroundColor: 'warning.main',
-              height: 56,
-              width: 56
+              display: 'flex',
+              mt: 1,
+              mx: 'auto',
+              width: '140px',
+              '& img': {
+                width: '100%'
+              }
             }}
           >
-            <InsertChartIcon />
-          </Avatar>
-        </Grid>
-      </Grid>
-      <Box sx={{ pt: 3 }}>
-        <LinearProgress
-          value={75.5}
-          variant="determinate"
-        />
-      </Box>
+            <img
+              alt="Go to pro"
+              src="/static/images/sidebar_pro.png"
+            />
+          </Box>
+          <NextLink
+            href="https://material-kit-pro-react.devias.io/"
+            passHref
+          >
+            <Button
+              color="primary"
+              component="a"
+              endIcon={(<OpenInNewIcon />)}
+              fullWidth
+              sx={{ mt: 1 }}
+              variant="contained"
+            >
+              Check out VC
+            </Button>
+          </NextLink>
+        </Box>
     </CardContent>
   </Card>
 );

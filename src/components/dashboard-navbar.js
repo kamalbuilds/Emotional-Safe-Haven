@@ -1,101 +1,103 @@
-import { useRef, useState } from 'react';
-import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-import { AppBar, Avatar, Badge, Box, IconButton, Toolbar, Tooltip } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
-import { Bell as BellIcon } from '../icons/bell';
-import { UserCircle as UserCircleIcon } from '../icons/user-circle';
-import { Users as UsersIcon } from '../icons/users';
-import { AccountPopover } from './account-popover';
+import * as React from "react";
+import { useRef, useState } from "react";
+import PropTypes from "prop-types";
+import styled from "@emotion/styled";
+import { AppBar, Avatar, Badge, Box, Divider, IconButton, Toolbar, Tooltip } from "@mui/material";
 
-const DashboardNavbarRoot = styled(AppBar)(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
-  boxShadow: theme.shadows[3]
-}));
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
+import NextLink from "next/link";
 
 export const DashboardNavbar = (props) => {
   const { onSidebarOpen, ...other } = props;
-  const settingsRef = useRef(null);
-  const [openAccountPopover, setOpenAccountPopover] = useState(false);
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <>
-      <DashboardNavbarRoot
-        sx={{
-          left: {
-            lg: 280
-          },
-          width: {
-            lg: 'calc(100% - 280px)'
-          }
-        }}
-        {...other}>
-        <Toolbar
-          disableGutters
-          sx={{
-            minHeight: 64,
-            left: 0,
-            px: 2
-          }}
-        >
-          <IconButton
-            onClick={onSidebarOpen}
-            sx={{
-              display: {
-                xs: 'inline-flex',
-                lg: 'none'
-              }
-            }}
-          >
-            <MenuIcon fontSize="small" />
-          </IconButton>
-          <Tooltip title="Search">
-            <IconButton sx={{ ml: 1 }}>
-              <SearchIcon fontSize="small" />
-            </IconButton>
-          </Tooltip>
-          <Box sx={{ flexGrow: 1 }} />
-          <Tooltip title="Contacts">
-            <IconButton sx={{ ml: 1 }}>
-              <UsersIcon fontSize="small" />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Notifications">
-            <IconButton sx={{ ml: 1 }}>
-              <Badge
-                badgeContent={4}
-                color="primary"
-                variant="dot"
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              LOGO
+            </Typography>
+            <NextLink href="/" passHref>
+              <Button color="inherit" style={{ textTransform: "none" }}>
+                Dashboard
+              </Button>
+            </NextLink>
+            <NextLink href="/therapists" passHref>
+              <Button color="inherit" style={{ textTransform: "none" }}>
+                Find a therapist
+              </Button>
+            </NextLink>
+            <NextLink href="/products" passHref>
+              <Button color="inherit" style={{ textTransform: "none" }}>
+                Peace Pocket
+              </Button>
+            </NextLink>
+            <NextLink href="https://material-kit-pro-react.devias.io/" passHref>
+              <Button color="inherit" style={{ textTransform: "none" }}>
+                Blog
+              </Button>
+            </NextLink>
+            <div>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
               >
-                <BellIcon fontSize="small" />
-              </Badge>
-            </IconButton>
-          </Tooltip>
-          <Avatar
-            onClick={() => setOpenAccountPopover(true)}
-            ref={settingsRef}
-            sx={{
-              cursor: 'pointer',
-              height: 40,
-              width: 40,
-              ml: 1
-            }}
-            src="/static/images/avatars/avatar_1.png"
-          >
-            <UserCircleIcon fontSize="small" />
-          </Avatar>
-        </Toolbar>
-      </DashboardNavbarRoot>
-      <AccountPopover
-        anchorEl={settingsRef.current}
-        open={openAccountPopover}
-        onClose={() => setOpenAccountPopover(false)}
-      />
+                <AccountCircle />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <NextLink href="/account" passHref>
+                  <MenuItem onClick={handleClose}>My Account</MenuItem>
+                </NextLink>
+                <Divider />
+                <NextLink href="/login" passHref>
+                  <MenuItem onClick={handleClose}>Login</MenuItem>
+                </NextLink>
+                <Divider />
+                <NextLink href="/register" passHref>
+                  <MenuItem onClick={handleClose}>Register</MenuItem>
+                </NextLink>
+                <Divider />
+                <NextLink href="/therapists" passHref>
+                  <MenuItem onClick={handleClose}>Settings</MenuItem>
+                </NextLink>
+              </Menu>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </Box>
     </>
   );
-};
-
-DashboardNavbar.propTypes = {
-  onSidebarOpen: PropTypes.func
 };

@@ -9,7 +9,7 @@ const DashboardLayoutRoot = styled('div')(({ theme }) => ({
   display: 'flex',
   flex: '1 1 auto',
   maxWidth: '100%',
-  paddingTop: 50,
+  paddingTop: 1,
   [theme.breakpoints.up('lg')]: {
     paddingLeft: 280
   }
@@ -21,23 +21,22 @@ export const DashboardLayout = (props) => {
 
   return (
     <AuthGuard>
+      <DashboardNavbar onSidebarOpen={() => setSidebarOpen(true)} />
       <DashboardLayoutRoot>
         <Box
           sx={{
-            display: 'flex',
-            flex: '1 1 auto',
-            flexDirection: 'column',
-            width: '100%'
+            display: "flex",
+            flex: "1 1 auto",
+            flexDirection: "column",
+            width: "100%",
           }}
         >
           {children}
         </Box>
       </DashboardLayoutRoot>
-      <DashboardNavbar onSidebarOpen={() => setSidebarOpen(true)} />
-      <DashboardSidebar
-        onClose={() => setSidebarOpen(false)}
-        open={isSidebarOpen}
-      />
+      {/* <DashboardNavbar onSidebarOpen={() => setSidebarOpen(true)} /> */}
+      <DashboardSidebar onClose={() => setSidebarOpen(false)} open={isSidebarOpen} />
+      <DashboardSidebar />
     </AuthGuard>
   );
 };
