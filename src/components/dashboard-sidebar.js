@@ -18,7 +18,7 @@ const items = [
   {
     href: "/account",
     imageUrl: "/static/images/products/product_3.png",
-    title: "MonaLisa",
+    title: "Aman Singh",
   },
   {
     href: "/settings",
@@ -115,7 +115,7 @@ export const DashboardSidebar = (props) => {
             my: 0,
           }}
         />
-        <CardHeader title="Active Counsellars" />
+        <CardHeader title="Active Counsellors" />
         <Box sx={{ flexGrow: 0 }}>
           {items.map((item) => (
             <NavItem key={item.title} href={item.href} title={item.title} />
