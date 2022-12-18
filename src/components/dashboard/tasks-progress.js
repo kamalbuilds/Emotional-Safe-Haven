@@ -1,5 +1,4 @@
 import { Avatar, Box, Card, CardContent, Grid, LinearProgress, Typography } from '@mui/material';
-import InsertChartIcon from '@mui/icons-material/InsertChartOutlined';
 /// Event tab on top
 import NextLink from "next/link";
 import { Button } from "@mui/material";
@@ -17,7 +16,6 @@ export const TasksProgress = (props) => (
           >
             Want to talk to an expert?
           </Typography>
-          
           <Box
             sx={{
               display: 'flex',
@@ -30,12 +28,12 @@ export const TasksProgress = (props) => (
             }}
           >
             <img
-              alt="Go to pro"
+              alt="Talk to expert"
               src="/static/images/sidebar_pro.png"
             />
           </Box>
           <NextLink
-            href="https://material-kit-pro-react.devias.io/"
+            href="/404"
             passHref
           >
             <Button
