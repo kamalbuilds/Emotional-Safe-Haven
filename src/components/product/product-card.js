@@ -39,7 +39,7 @@ export const ProductCard = ({ product, ...rest }) => (
         >
           <FavoriteRoundedIcon color="secondary" />
           <Typography color="textSecondary" display="inline" sx={{ pl: 1 }} variant="body2">
-            Baby's first birthday
+            My first birthday
           </Typography>
         </Grid>
       </Grid>

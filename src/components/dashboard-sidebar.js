@@ -93,7 +93,7 @@ export const DashboardSidebar = (props) => {
             >
               <div>
                 <Typography color="inherit" variant="subtitle1">
-                  How's your mood today ?
+                  How is your mood today ?
                 </Typography>
                 <Typography color="secondary" variant="body2">
                   Your mood : Happy
