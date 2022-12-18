@@ -16,22 +16,22 @@ const items = [
     title: "Dash Board",
   },
   {
-    href: "/account",
+    href: "/404",
     imageUrl: "/static/images/products/product_3.png",
     title: "MonaLisa",
   },
   {
-    href: "/settings",
+    href: "/404",
     imageUrl: "/static/images/products/product_3.png",
     title: "Monalisa Tiwari",
   },
   {
-    href: "/login",
+    href: "/404",
     imageUrl: "/static/images/products/product_3.png",
     title: "Monalisa Tiwari Pandey",
   },
   {
-    href: "/register",
+    href: "/404",
     imageUrl: "/static/images/products/product_3.png",
     title: "Ninja Hatori",
   },
