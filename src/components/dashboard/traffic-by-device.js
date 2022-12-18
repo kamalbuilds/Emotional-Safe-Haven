@@ -194,5 +194,6 @@ export const TrafficByDevice = (props) => {
         </Grid>
       </Card>
     </>
+
   );
 };

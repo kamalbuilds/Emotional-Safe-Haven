@@ -52,6 +52,7 @@ const products = [
 ];
 
 export const LatestProducts = (props) => (
+
   <Card
     {...props}
     sx={{
