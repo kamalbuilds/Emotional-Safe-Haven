@@ -66,7 +66,7 @@ export const LatestProducts = (props) => (
       borderRadius: 1,
     }}
   >
-    <CardHeader title="Active Counsellars" />
+    <CardHeader title="Active Counsellors" />
     <Divider />
     
     <List>
