@@ -10,11 +10,7 @@ import { NavItem } from './nav-item';
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const items = [
-  {
-    href: "/",
-    imageUrl: "/static/images/products/product_3.png",
-    title: "Dash Board",
-  },
+  
   {
     href: "/404",
     imageUrl: "/static/images/products/product_3.png",
