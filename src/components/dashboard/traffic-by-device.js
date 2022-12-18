@@ -3,7 +3,7 @@ import { Box, Card, CardContent, CardHeader, Divider, Typography, useTheme } fro
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import PhoneIcon from '@mui/icons-material/Phone';
 import TabletIcon from '@mui/icons-material/Tablet';
-
+import CalendlyButton from '../CalendlyButton';
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import { AccountCircle, Help, Settings } from "@mui/icons-material";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
@@ -117,7 +117,7 @@ export const TrafficByDevice = (props) => {
       </Card>
 
       <Card>
-        <CardHeader title="Schedule" />
+        <CardHeader title="Schedule a 1 to 1 call" />
         <Divider />
         <Grid item xs={18} spacing={7}>
           <Grid margin={1.5}>
@@ -140,15 +140,19 @@ export const TrafficByDevice = (props) => {
                         size="small"
                         variant="contained"
                         padding={0}
+                      
                       >
                         Connect
                       </Button>
                     </Grid>
                     <Grid item xs={6}>
                       {" "}
-                      <Button color="primary" sx={{ mt: 2 }} size="small" variant="contained">
-                        Reshedule
-                      </Button>
+                      
+                      <CalendlyButton
+                        url="https://calendly.com/geniusamansingh/30min" //TODO enter your orgname in the calendly link
+                        text="Reshedule"
+                        color="primary" sx={{ mt: 2 }} size="small" variant="contained"
+                      />
                     </Grid>
                   </Grid>
                 </Grid>
