@@ -47,7 +47,7 @@ export const DashboardNavbar = (props) => {
                 Peace Pocket
               </Button>
             </NextLink>
-            <NextLink href="https://material-kit-pro-react.devias.io/" passHref>
+            <NextLink href="/404" passHref>
               <Button color="inherit" style={{ textTransform: "none" }}>
                 Blog
               </Button>

@@ -72,7 +72,7 @@ export const LatestProducts = (props) => (
     <List>
       {products.map((product, i) => (
         <NextLink
-            key= {product.id}
+            key={product.id}
             href={product.imageUrl}
             passHref
           >
