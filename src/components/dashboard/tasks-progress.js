@@ -1,4 +1,5 @@
 import { Avatar, Box, Card, CardContent, Grid, LinearProgress, Typography } from '@mui/material';
+import InsertChartIcon from '@mui/icons-material/InsertChartOutlined';
 /// Event tab on top
 import NextLink from "next/link";
 import { Button } from "@mui/material";
@@ -16,6 +17,7 @@ export const TasksProgress = (props) => (
           >
             Want to talk to an expert?
           </Typography>
+          
           <Box
             sx={{
               display: 'flex',
@@ -28,12 +30,12 @@ export const TasksProgress = (props) => (
             }}
           >
             <img
-              alt="Talk to expert"
+              alt="Go to pro"
               src="/static/images/sidebar_pro.png"
             />
           </Box>
           <NextLink
-            href="/404"
+            href="https://session-events.vercel.app/"
             passHref
           >
             <Button
@@ -44,7 +46,7 @@ export const TasksProgress = (props) => (
               sx={{ mt: 1 }}
               variant="contained"
             >
-              Check out VC
+              Breakout rooms
             </Button>
           </NextLink>
         </Box>
