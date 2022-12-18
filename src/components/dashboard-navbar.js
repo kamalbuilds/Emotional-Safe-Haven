@@ -1,8 +1,5 @@
 import * as React from "react";
-import { useRef, useState } from "react";
-import PropTypes from "prop-types";
-import styled from "@emotion/styled";
-import { AppBar, Avatar, Badge, Box, Divider, IconButton, Toolbar, Tooltip } from "@mui/material";
+import { AppBar, Box, Divider, IconButton, Toolbar } from "@mui/material";
 
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
