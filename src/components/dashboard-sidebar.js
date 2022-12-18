@@ -8,6 +8,7 @@ import { NavItem } from './nav-item';
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const items = [
+  
   {
     href: "/404",
     imageUrl: "/static/images/products/product_3.png",
@@ -16,7 +17,7 @@ const items = [
   {
     href: "/404",
     imageUrl: "/static/images/products/product_3.png",
-    title: "MonaLisa",
+    title: "Aman Singh",
   },
   {
     href: "/404",
@@ -113,7 +114,7 @@ export const DashboardSidebar = (props) => {
             my: 0,
           }}
         />
-        <CardHeader title="Active Counsellars" />
+        <CardHeader title="Active Counsellors" />
         <Box sx={{ flexGrow: 0 }}>
           {items.map((item) => (
             <NavItem key={item.title} href={item.href} title={item.title} />

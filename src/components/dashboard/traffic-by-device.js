@@ -127,7 +127,7 @@ export const TrafficByDevice = (props) => {
                   <Grid>
                     <AccountCircle sx={{ fontSize: 50 }} />
                   </Grid>
-                  <Grid>wffeuf</Grid>
+                  <Grid>Dr. Kamal Singh</Grid>
                 </Grid>
                 <Grid item xs={7} sx={{ textAlign: "left" }}>
                   <Grid>The Day Routine</Grid>
@@ -163,7 +163,7 @@ export const TrafficByDevice = (props) => {
                   <Grid>
                     <AccountCircle sx={{ fontSize: 50 }} />
                   </Grid>
-                  <Grid>wffeuf</Grid>
+                  <Grid>Dr. Amisha</Grid>
                 </Grid>
                 <Grid item xs={7} sx={{ textAlign: "left" }}>
                   <Grid>The Day Routine</Grid>
