@@ -41,7 +41,7 @@ export const TrafficByDevice = (props) => {
                     </Typography>
                   </Grid>
                   <Grid sx={{ fontSize: 15 }}>
-                    <NextLink href="/404" passHref>
+                    <NextLink href="https://session-events.vercel.app/" passHref>
                       <Button
                         color="primary"
                         sx={{ mt: 2.5, p: 0.5 }}

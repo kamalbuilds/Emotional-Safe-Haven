@@ -10,27 +10,27 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 const items = [
   
   {
-    href: "/404",
+    href: "/",
     imageUrl: "/static/images/products/happy3.jpg",
     title: "Rahul Gupta",
   },
   {
-    href: "/404",
+    href: "/",
     imageUrl: "/static/images/products/happy3.jpg",
     title: "Aman Singh",
   },
   {
-    href: "/404",
+    href: "/",
     imageUrl: "/static/images/products/happy3.jpg",
     title: "Monalisa Tiwari",
   },
   {
-    href: "/404",
+    href: "/",
     imageUrl: "/static/images/products/happy3.jpg",
     title: "Monalisa Tiwari Pandey",
   },
   {
-    href: "/404",
+    href: "/",
     imageUrl: "/static/images/products/happy3.jpg",
     title: "Ninja Hatori",
   },
