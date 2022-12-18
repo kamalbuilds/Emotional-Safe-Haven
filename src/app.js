@@ -8,11 +8,11 @@ const morgan = require("morgan");
 const session = require("express-session");
 const ErrorHandler = require("./utils/error");
 const handleErrors = require("./middleware/handleErrors");
-
+const path = require("path");
 const corsOptions = {
   origin: "*",
 };
-
+const passportSetup = require("./passport");
 app.use(morgan("dev"));
 app.use(cors(corsOptions));
 
@@ -29,9 +29,20 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.send("welcome to safe haven backend");
-});
+// app.get("/*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+// });
+
+const authRouter = require("./routes/auth");
+const userRouter = require("./routes/user");
+const dilemmaRouter = require("./routes/dilemma");
+app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
+app.use("/api/dilemma", dilemmaRouter);
+
+// app.get("/", (req, res) => {
+//   res.send("welcome to safe haven backend");
+// });
 
 app.use(handleErrors);
 
