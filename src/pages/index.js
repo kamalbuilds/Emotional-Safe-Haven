@@ -79,7 +79,7 @@ const Page = () => (
             xl={9}
             xs={12}
           >
-            <Sales />
+            <Sales sx={{ height: '100%' }}/>
           </Grid>
           <Grid
             item

@@ -4,14 +4,12 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Box, Button, Divider, Drawer, Typography, CardHeader, useMediaQuery, ListItem } from '@mui/material';
 import { Selector as SelectorIcon } from '../icons/selector';
-import { Logo } from './logo';
 import { NavItem } from './nav-item';
-
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const items = [
   {
-    href: "/",
+    href: "/404",
     imageUrl: "/static/images/products/product_3.png",
     title: "Dash Board",
   },
